@@ -1,10 +1,6 @@
 # NITKThread - A social media app built using MERN
 
 
-## Demo
-
-[Deployed on Netlify (front-end) & Heroku (back-end)](https://reddish.netlify.app)
-
 ## Built using
 
 #### Front-end
