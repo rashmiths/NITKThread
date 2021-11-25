@@ -3,7 +3,7 @@
 
 ## Demo
 
-[Deployed on Netlify (front-end) & Heroku (back-end)](https://reddish.netlify.app)
+[Deployed on Netlify (front-end) & Heroku (back-end)](https://sleepy-kilby-1a0bca.netlify.app/)
 
 ## Built using
 
