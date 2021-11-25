@@ -6,6 +6,7 @@ import DeleteDialog from './DeleteDialog';
 import generateBase64Encode from '../utils/genBase64Encode';
 import AlertMessage from './AlertMessage';
 import getErrorMsg from '../utils/getErrorMsg';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import {
   Button,
@@ -137,17 +138,17 @@ const UpdateAvatarForm = ({ closeModal }) => {
         color="secondary"
         className={classes.submitButton}
         fullWidth
-        startIcon={<FaceIcon />}
+        startIcon={isLoading ? null : <FaceIcon />}
         onClick={handleAvatarUpload}
         disabled={isLoading}
       >
         {user?.avatar?.exists
           ? isLoading
-            ? 'Updating'
+            ? <CircularProgress />
             : 'Update avatar'
           : isLoading
-          ? 'Adding'
-          : 'Add avatar'}
+            ? <CircularProgress />
+            : 'Add avatar'}
       </Button>
       <AlertMessage
         error={error}

@@ -43,7 +43,7 @@ const SortTabBar = ({ sortBy, handleTabChange, subscribedTab, user }) => {
             value="subscribed"
           />
         )}
-        <Tab
+        {/* <Tab
           icon={
             <SvgIcon fontSize="small">
               <Best />
@@ -51,7 +51,7 @@ const SortTabBar = ({ sortBy, handleTabChange, subscribedTab, user }) => {
           }
           label="Best"
           value="best"
-        />
+        /> */}
         <Tab
           icon={
             <SvgIcon fontSize="small">
@@ -70,7 +70,7 @@ const SortTabBar = ({ sortBy, handleTabChange, subscribedTab, user }) => {
           label="Top"
           value="top"
         />
-        <Tab
+        {/* <Tab
           icon={
             <SvgIcon fontSize="small">
               <Controversial />
@@ -87,7 +87,7 @@ const SortTabBar = ({ sortBy, handleTabChange, subscribedTab, user }) => {
           }
           label="Old"
           value="old"
-        />
+        /> */}
       </Tabs>
     </Paper>
   );

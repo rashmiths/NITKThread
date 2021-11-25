@@ -6,6 +6,7 @@ import { notify } from '../reducers/notificationReducer';
 import MobileUserMenu from './MobileUserMenu';
 import DesktopUserMenu from './DesktopUserMenu';
 import SearchBar from './SearchBar';
+import logo from '../constants/logo.png'
 
 import {
   AppBar,
@@ -47,22 +48,11 @@ const NavBar = () => {
                   color="primary"
                   component={RouterLink}
                   to="/"
-                  startIcon={<RedditIcon fontSize="large" />}
+                  startIcon={<img src={logo} alt="Logo" height="50px" />}
                   size="large"
                 >
-                  reddish
+                  NITKThread
                 </Button>
-                <Typography variant="caption" color="secondary">
-                  Made with <FavoriteIcon style={{ fontSize: 12 }} /> by
-                  <Link
-                    href={'https://github.com/amand33p'}
-                    color="inherit"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <strong>{` amand33p`}</strong>
-                  </Link>
-                </Typography>
               </div>
               {!isMobile && <SearchBar />}
             </div>

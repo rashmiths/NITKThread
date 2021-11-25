@@ -1,15 +1,15 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-const PORT = process.env.PORT;
-const MONGODB_URI = process.env.MONGODB_URI;
-const SECRET = process.env.SECRET;
+let PORT = 3005;
+let MONGODB_URI = 'mongodb+srv://GoCode:GoCode@cluster0.zcitw.mongodb.net/NITKThread?retryWrites=true&w=majority';
+let SECRET = 'jwt-something';
 const UPLOAD_PRESET = process.env.UPLOAD_PRESET || 'ml_default';
 
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: 'doqxwd5vy',
+  api_key: '172736955169323',
+  api_secret: '_fUJkhyZUm8l9ymVvWASjhGBav8',
 });
 
 module.exports = {
@@ -17,5 +17,5 @@ module.exports = {
   MONGODB_URI,
   SECRET,
   cloudinary,
-  UPLOAD_PRESET,
+  UPLOAD_PRESET
 };

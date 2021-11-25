@@ -68,13 +68,39 @@ const AuthForm = () => {
   const handleSignup = async (values, { setSubmitting }) => {
     try {
       setSubmitting(true);
+      console.log(values)
+
+      // if (org[1] !== 'nitk.edu.in') {
+      //   setSubmitting(false);
+      //   setError('Not an NITK email');
+      // }
+      // else {
+      //   console.log(values);
+
+
+      //   await dispatch(signupUser(values));
+
+      //   dispatch(
+      //     notify(
+      //       `Welcome, ${values.username}. You've been successfully registered.`,
+      //       'success'
+      //     )
+      //   );
+
+      // }
+
+
+
       await dispatch(signupUser(values));
+
       dispatch(
         notify(
           `Welcome, ${values.username}. You've been successfully registered.`,
           'success'
         )
       );
+
+
     } catch (err) {
       setSubmitting(false);
       setError(getErrorMsg(err));
@@ -97,6 +123,7 @@ const AuthForm = () => {
           {({ isSubmitting }) => (
             <>
               <Form className={classes.form}>
+
                 <Typography
                   variant="h5"
                   color="secondary"
@@ -106,6 +133,17 @@ const AuthForm = () => {
                     ? 'Login to your account'
                     : 'Create a new account'}
                 </Typography>
+                {/* {authType === 'signup' ? <div className={classes.input}>
+                  <PersonIcon className={classes.inputIcon} color="primary" />
+                  <TextInput
+                    name="Email"
+                    type="text"
+                    placeholder="Enter Your email"
+                    label="Email"
+                    required
+                    fullWidth
+                  />
+                </div> : null} */}
                 <div className={classes.input}>
                   <PersonIcon className={classes.inputIcon} color="primary" />
                   <TextInput
@@ -161,8 +199,8 @@ const AuthForm = () => {
                       ? 'Logging In'
                       : 'Login'
                     : isSubmitting
-                    ? 'Signing Up'
-                    : 'Sign Up'}
+                      ? 'Signing Up'
+                      : 'Sign Up'}
                 </Button>
               </Form>
               <Divider

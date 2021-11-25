@@ -114,8 +114,8 @@ const AddPostForm = ({
             actionType === 'edit'
               ? postToEditSub.id
               : !fromSubreddit
-              ? ''
-              : fromSubreddit.id,
+                ? ''
+                : fromSubreddit.id,
         }}
         onSubmit={actionType === 'edit' ? handleUpdatePost : handleAddPost}
         validationSchema={validationSchema}
@@ -182,8 +182,8 @@ const AddPostForm = ({
                       actionType === 'edit'
                         ? postToEditSub.subredditName
                         : !fromSubreddit
-                        ? 'Choose a subreddish'
-                        : fromSubreddit.subredditName
+                          ? 'Choose a Channels'
+                          : fromSubreddit.subredditName
                     }
                     placeholder="Search by name"
                     required
@@ -302,8 +302,8 @@ const AddPostForm = ({
                   ? 'Updating'
                   : 'Update'
                 : isSubmitting
-                ? 'Posting'
-                : 'Post'}
+                  ? 'Posting'
+                  : 'Post'}
             </Button>
           </Form>
         )}
