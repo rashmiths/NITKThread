@@ -1,7 +1,7 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-let PORT = 3005;
+let PORT = 3000;
 let MONGODB_URI = 'mongodb+srv://GoCode:GoCode@cluster0.zcitw.mongodb.net/NITKThread?retryWrites=true&w=majority';
 let SECRET = 'jwt-something';
 const UPLOAD_PRESET = process.env.UPLOAD_PRESET || 'ml_default';
